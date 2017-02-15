@@ -4,8 +4,6 @@
 #include <conio.h>
 using namespace std;
 
-
-
 void printGame(int * input) {
   for(int i = 0; i < 81; i++) {
     if (i > 0) {
@@ -41,7 +39,6 @@ bool verify(int * input, int index) {
   int sqX = indexX / 3;
   int sqY = indexY / 3;
   int sqindex = select(indexX, indexY, 3);
-
   // Verify the column
   for (int i = 0; i < 9; i++) {
     if (i != indexY) {
@@ -50,7 +47,6 @@ bool verify(int * input, int index) {
       }
     }
   }
-
   // Verify the line
   for(int i = 0; i < 9; i++) {
     if (i != indexX) {
@@ -59,7 +55,6 @@ bool verify(int * input, int index) {
       }
     }
   }
-
   // Verify the square
   for(int i = 0; i < 3; i++) {
     for(int j = 0; j < 3; j++) {
@@ -70,7 +65,6 @@ bool verify(int * input, int index) {
         }
       }
     }
-
   }
 
   return true;
@@ -92,8 +86,8 @@ void mknew(int * newgame) {
     }
 
     cout << " ";
-
     newgame[i] = getch();
+
     if(newgame[i] >= '0' && newgame[i] <= '9') {
       newgame[i] -= '0';
       if (newgame[i] == 0) {
@@ -112,7 +106,6 @@ void mknew(int * newgame) {
     }
   }
   cout << endl;
-
 }
 
 bool isToComplete(int * ref, int index) {
@@ -136,6 +129,7 @@ int prevToComplete(int * ref, int start) {
 bool slvgame(int * solution, int * game) {
   int x;
   int nexti;
+
   for(int j = 0; j < 81; j++) {
     solution[j] = game[j];
   }
@@ -144,8 +138,6 @@ bool slvgame(int * solution, int * game) {
   while(i < 81) {
     nexti = i;
     solution[i]++;
-
-    // cout << "[" << i % 9 << "," << int(i / 9) << "]: " << solution[i] << "  i: " << i << "  v: " << verify(solution, i);
     if(solution[i] > 9) {
       solution[i] = 0;
       nexti = prevToComplete(game, i - 1);
@@ -155,10 +147,7 @@ bool slvgame(int * solution, int * game) {
       nexti = nextToComplete(game, i + 1);
     }
     i = nexti;
-    // getchar();
   }
-
-
   return true;
 }
 
@@ -171,19 +160,19 @@ int main() {
   int nsolv[81];
   int solv[81];
 
-
   for (size_t i = 0; i < 81; i++) {
     nsolv[i] = 0;  // 0 -> Blank
     solv[i] = 0;  // 0 -> Blank
   }
 
   cout << "\nType de game (use 0 for blank): \n" << endl;
-
   mknew(nsolv);
 
   slvgame(solv, nsolv);
+
   cout << "\n Solved:\n" << endl;
   printGame(solv);
+  
   cout << "\nSee code on GitHub? (Y/N) ";
   char ans = getch();
   cout << ans;
