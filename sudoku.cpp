@@ -164,6 +164,7 @@ bool slvgame(int * solution, int * game) {
 
 int main() {
   int x;
+  system("TITLE Sudoku Solver");
   cout << "*** SUDOKU SOLVER ***" << endl;
   cout << "    by luisbaldissera" << endl;
 
