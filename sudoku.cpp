@@ -165,14 +165,14 @@ int main() {
     solv[i] = 0;  // 0 -> Blank
   }
 
-  cout << "\nType de game (use 0 for blank): \n" << endl;
+  cout << "\nType the game (use 0 for blank): \n" << endl;
   mknew(nsolv);
 
   slvgame(solv, nsolv);
 
   cout << "\n Solved:\n" << endl;
   printGame(solv);
-  
+
   cout << "\nSee code on GitHub? (Y/N) ";
   char ans = getch();
   cout << ans;
