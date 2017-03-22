@@ -4,7 +4,7 @@
 
  It was made to pratice C++ Language.
 
- ![alt text](./assets/screenshot2.png?raw=true "Screenshot")
+ ![alt text](./assets/screenshot.png?raw=true "Screenshot")
 
 ## Instalation
 
