@@ -5,3 +5,10 @@
  It was made to pratice C++ Language.
 
  ![alt text](/assets/screenshot.png?raw=true "Screenshot")
+
+## Instalation
+
+Download the `sudoku.cpp` file and compile it
+
+### Windows
+If you are using MinGW added to Path, then use the command `gcc sudoku.cpp -o sudoku.exe`
