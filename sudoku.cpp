@@ -1,7 +1,7 @@
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
+#include "iostream"
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
 using namespace std;
 
 void printGame(int * input) {

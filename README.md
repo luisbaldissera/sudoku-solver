@@ -11,4 +11,4 @@
 Download the `sudoku.cpp` file and compile it
 
 ### Windows
-If you are using MinGW added to Path, then use the command `gcc sudoku.cpp -o sudoku.exe`
+If you are using MinGW added to Path, then use the command `g++ sudoku.cpp -o sudoku.exe`
